@@ -1,0 +1,13 @@
+Implementing the pages
+
+1. Add html files
+2. Add JS file - add links to to JS files in the base/boilerplate head
+3. Add the radio button script to that specific page
+4. Add data-cookieconsent="statistics" type="text/plain" attributes to GA script to stop it loading
+5. Edit service name in cookie script
+6. Test the scripts are working
+
+Note:
+
+cookies.min.nhsuk.js - loads banner in NHS Digital kit
+cookies.min.bsa.js - loads banner in NHSBSA swoosh kit
