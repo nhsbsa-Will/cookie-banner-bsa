@@ -40,8 +40,19 @@
     <script src="https://services.nhsbsa.nhs.uk/buy-prescription-prepayment-certificate/javascripts/js.cookie.min.js"></script>
     
     <!-- Cookie Banner script -->
+    <script src="/store-url.js"></script>
     <script src="/cookies.min.bsa.js"></script>
-		
+    
+    <script>
+			const getURL = () => {
+			const getURL = document.referrer;
+			sessionStorage.setItem("sessionURL", getURL);
+      const getSession = sessionStorage.getItem("sessionURL");
+      
+			console.log(`The previous URL was = ${getSession}`);
+			}
+		</script>
+
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-85615315-2" data-cookieconsent="statistics" type="text/plain"></script>
 		<script>
