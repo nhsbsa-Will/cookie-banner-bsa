@@ -1,0 +1,46 @@
+<!-- Return from Cookie -->
+	<th:block th:unless="${#httpServletRequest.requestURI == '/check-for-help-paying-nhs-costs/cookies'} or ${#httpServletRequest.requestURI == '/check-for-help-paying-nhs-costs/cookie-details'} or ${#httpServletRequest.requestURI == '/check-for-help-paying-nhs-costs/cookie-confirmation'}">
+	<!-- Store the url for cookie return -->
+	<script>
+			const getURL = () => {
+					// checks to see if cookie prefence has been set
+					if (NHSCookieConsent.getConsented() === false) {
+							// gets the current URL
+							const getURL = document.referrer;
+							// stores URL in session storage
+							sessionStorage.setItem("sessionURL", getURL);
+					}
+			}
+	</script>
+</th:block>
+<th:block th:if="${#httpServletRequest.requestURI == '/check-for-help-paying-nhs-costs/cookies'}">
+	<!-- Store url when pref selected in banner -->
+	<script>
+			const getURL = () => {
+							// gets the current URL
+							const getURL = document.referrer;
+							// stores URL in session storage
+							sessionStorage.setItem("sessionURL", getURL);
+			}
+	</script>
+</th:block>
+<th:block th:if="${#httpServletRequest.requestURI == '/check-for-help-paying-nhs-costs/cookie-confirmation'}">
+	<!-- Get url to return from cookie confirmation -->
+	<script>
+			const getURL = () => {
+					// Gets the stored URL
+					const getSession = sessionStorage.getItem("sessionURL");
+					// Assigns the URL to href of the continue button
+					if (getSession) { 
+							document.getElementById("cookie-return-btn").setAttribute("href", getSession);
+					} 
+			}   
+	</script>
+</th:block>
+<script>
+	// Document ready
+	(function() {
+					getURL();
+			})();
+</script>
+<!-- end of cookie scripts -->
