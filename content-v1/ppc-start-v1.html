@@ -40,8 +40,8 @@
     <script src="https://services.nhsbsa.nhs.uk/buy-prescription-prepayment-certificate/javascripts/js.cookie.min.js"></script>
     
     <!-- Cookie Banner script -->
-    <!-- <script src="/store-url.js"></script>
-    <script src="/cookies.min.bsa.js"></script>
+    <script src="/store-url.js"></script>
+    <script src="/content-v1/cookies.min.bsa.js"></script>
     
     <script>
 			const getURL = () => {
@@ -51,9 +51,9 @@
       
 			console.log(`The previous URL was = ${getSession}`);
 			}
-		</script> -->
+		</script>
 
-		<!-- Global site tag (gtag.js) - Google Analytics
+		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-85615315-2" data-cookieconsent="statistics" type="text/plain"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
@@ -61,7 +61,7 @@
 		  gtag('js', new Date());
 		
 		  gtag('config', "UA-85615315-22");
-    </script> -->
+    </script>
 
   
 	</head>
@@ -104,25 +104,19 @@
       <!-- Copy this grid row and add to your project template page -->
       <div class="grid-row">
 			  <div class="column-two-thirds">
-          <h1 class="heading-xlarge">Cookie banner prototype</h1>
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">Versions</th>
-                <th scope="col">Updates</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><a href="/content-v1/ppc-start-v1.html">v1 - December 2020</a></td>
-                <td>First iteration using NHS Digital component</td>
-              </tr>
-              <tr>
-                <td><a href="/content-v2/ppc-start-v2.html">v2 - January 2021</a></td>
-                <td>Updated content due to changing requirements</td>
-              </tr>
-            </tbody>
-          </table>
+          <h1 class="heading-xlarge">Buy an NHS Prescription Prepayment Certificate</h1>
+          <p>Save money on NHS prescriptions by prepaying for them.</p>
+          <p>You can pay a set price for prescriptions for 3 or 12 months, no matter how many you need.</p>
+          <p>A prescription costs £<span>9.15</span> per item, but prepaying for an unlimited number of prescriptions is:</p>
+          <ul class="list list-bullet text">
+            <li>£<span>29.65</span> for 3 months</li>
+            <li>£<span>105.90</span> for 12 months (or 10 Direct Debit instalments of £<span>10.59</span>)</li>
+          </ul>
+          
+          <div class="form-group">
+            <input type="submit" class="button button-start" id="buy-now" value="Buy now">   
+          </div>
+        
         </div>
       </div>
       <!-- /. -->
