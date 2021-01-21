@@ -82,10 +82,116 @@
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-two-thirds">
           <!-- ENTER PAGE CONTENT HERE -->
-          
-        
+          <h1 class="nhsuk-heading-l">
+            <span class="nhsuk-heading-l">Buy an NHS Prescription Prepayment Certificate</span>
+            Choose which cookies we use
+          </h1>
+          <p class="nhsuk-body-l">Let us know which cookies we can use. We'll use a cookie to save your settings for the next 120 days. This setting applies across all our digital services, not just the one you are accessing now.</p>
+          <h2 class="nhsuk-heading-m">Cookies that measure website use (analytics cookies)</h2>
+          <p>These cookies store information about how you use our website, such as the links you click on. We use them to help make our website better.</p>
+          <details class="nhsuk-details">
+            <summary class="nhsuk-details__summary">List of cookies that measure website use</summary>
+            <div class="panel panel-border-narrow">
+              <table>
+                <caption class="nhsuk-u-visually-hidden">Cookie names and purposes</caption>
+                <thead role="rowgroup" class="nhsuk-table__head">
+                  <tr role="row">
+                    <th role="columnheader" class="" scope="col">Cookie name</th>
+                    <th role="columnheader" class="" scope="col">Purpose</th>
+                    <th role="columnheader" class="" scope="col">Expires</th>
+                  </tr>
+                </thead>
+                <tbody class="nhsuk-table__body">
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">_utma</td>
+                    <td class="nhsuk-table__cell">To determine the number of unique visitors to our website</td>
+                    <td class="nhsuk-table__cell">2 years</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">_utmb</td>
+                    <td class="nhsuk-table__cell">To establish and continue your internet browser session on our website</td>
+                    <td class="nhsuk-table__cell">30 minutes</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">_utmt</td>
+                    <td class="nhsuk-table__cell">To manage data transfer volumes</td>
+                    <td class="nhsuk-table__cell">10 minutes</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">_utmz</td>
+                    <td class="nhsuk-table__cell">To determine where you came from when visiting our website</td>
+                    <td class="nhsuk-table__cell">6 months</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">_ga</td>
+                    <td class="nhsuk-table__cell">To distinguish users</td>
+                    <td class="nhsuk-table__cell">2 years</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">_gid</td>
+                    <td class="nhsuk-table__cell">To distinguish users</td>
+                    <td class="nhsuk-table__cell">24 hours</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">_gat</td>
+                    <td class="nhsuk-table__cell">To manage data transfer volumes</td>
+                    <td class="nhsuk-table__cell">10 minutes</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">_utmc</td>
+                    <td class="nhsuk-table__cell">To determine whether the user was beginning a new session/visit</td>
+                    <td class="nhsuk-table__cell">Until you close your browser</td>
+                  </tr>
+                  <tr role="row" class="nhsuk-table__row">
+                    <td class="nhsuk-table__cell">_utmv</td>
+                    <td class="nhsuk-table__cell">To store information about your visit to our webpages. This is updated every time information is sent to Google Analytics.</td>
+                    <td class="nhsuk-table__cell">2 years after the last update</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+          <div class="fnhsuk-form-group" style="margin-top:30px;">
+            <fieldset class="nhsuk-fieldset" id="cookie-statistics-form" aria-describedby="cookie-statistics">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l" id="cookie-statistics" class="visually-hidden">
+                <p class="nhsuk-fieldset__heading">Do you want to allow cookies to measure your website use?</p> 
+              </legend>
+              <div class="nhsuk-radios">
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="input-statistics-1" name="input-statistics" type="radio" value="on">
+                  <label class="nhsuk-label nhsuk-radios__label" for="input-statistics-1">
+                    Use cookies to measure my website use
+                  </label>
+                </div>
+                  <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="input-statistics-2" name="input-statistics" type="radio" value="yes">
+                  <label class="nhsuk-label nhsuk-radios__label" for="input-statistics-2">
+                    Do not use cookies to measure my website use
+                  </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <a href="/nhsuk-style-v2.5/cookie-confirmation.html" onclick="changeConsent();" type="submit" class="nhsuk-button" style="margin-top:20px;">
+              Save my cookie settings
+            </a>  
         </div>
       </div>
+      <script>
+        // Check the checkboxes based on status of cookie preferences
+        window.addEventListener("load", function checkCookie() {
+            document.getElementById("input-statistics-1").checked = NHSCookieConsent.getStatistics();
+            document.getElementById("input-statistics-2").checked = !NHSCookieConsent.getStatistics();
+        });
+        // Edit consent preferences based on checkbox input
+        function changeConsent() {
+        NHSCookieConsent.setStatistics(document.getElementById("input-statistics-1").checked);
+          if(typeof NHSCookieConsent.setConsented === "function") {
+            NHSCookieConsent.setConsented(true);
+          }
+        }
+      </script>
     </main>
   </div>
 
