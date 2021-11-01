@@ -61,25 +61,53 @@
   </head>
   <body class="">
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+    <style>
+      .nhsuk-skip-link-header {
+        position: relative;
+        float: left;
+        margin-bottom: -20px;
+        color: #fff;
+      }
+    
+      .nhsuk-skip-link-header:active,
+      .nhsuk-skip-link-header:focus {
+        top: 20px;
+      }
+    
+      .nhsuk-header__logo--clear-fix {
+        float: left;
+        clear: left;
+      }
 
-      <a class="nhsuk-skip-link" href="#main-content">Skip to main content</a>
-
-
-    <header class="nhsuk-header" role="banner" data-module="govuk-header">
-    <div class="nhsuk-width-container nhsuk-header__container">
-      <div class="nhsuk-header__logo nhsuk-header__logo--only">
-        <a href="/" class="nhsuk-header__link nhsuk-header__link--service">
-          <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" role="presentation" focusable="false" viewBox="0 0 40 16">
-            <path class="nhsuk-logo__background" d="M0 0h40v16H0z"></path>
-            <path class="nhsuk-logo__text" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
-            <image src="https://assets.nhs.uk/images/nhs-logo.png" xlink:href=""></image>
-          </svg>
-          <span class="nhsuk-header__service-name">
-            Buy an NHS Prescription Prepayment Certificate
-          </span>
-        </a>
+      /* header fix */
+      .nhsuk-header__logo--only {
+        max-width: 100%;
+      }
+      @media (min-width: 40.0625em) {
+        .nhsuk-header__logo--only .nhsuk-header__link--service {
+          max-width: none;
+        }
+      }
+      @media (max-width: 48.0525em) {
+        .nhsuk-header__logo {
+          max-width: 90%;
+        }
+      }
+    </style>
+    <header class="nhsuk-header" role="banner">
+      <a class="nhsuk-skip-link nhsuk-skip-link-header" href="#maincontent">Skip to main content</a>
+      <div class="nhsuk-width-container nhsuk-header__container">
+          <div class="nhsuk-header__logo nhsuk-header__logo--clear-fix">
+              <a class="nhsuk-header__link nhsuk-header__link--service" href="https://www.nhsbsa.nhs.uk/" target="_blank" aria-label="NHS Business Service Authority">
+                  <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16">
+                      <path class="nhsuk-logo__background" d="M0 0h40v16H0z"></path>
+                      <path class="nhsuk-logo__text" d="M3.9 1.5h4.4l2.6 9h.1l1.8-9h3.3l-2.8 13H9l-2.7-9h-.1l-1.8 9H1.1M17.3 1.5h3.6l-1 4.9h4L25 1.5h3.5l-2.7 13h-3.5l1.1-5.6h-4.1l-1.2 5.6h-3.4M37.7 4.4c-.7-.3-1.6-.6-2.9-.6-1.4 0-2.5.2-2.5 1.3 0 1.8 5.1 1.2 5.1 5.1 0 3.6-3.3 4.5-6.4 4.5-1.3 0-2.9-.3-4-.7l.8-2.7c.7.4 2.1.7 3.2.7s2.8-.2 2.8-1.5c0-2.1-5.1-1.3-5.1-5 0-3.4 2.9-4.4 5.8-4.4 1.6 0 3.1.2 4 .6"></path>
+                      <image src="https://assets.nhs.uk/images/nhs-logo.png" alt="NHS Business Services Authority logo" xlink:href=""></image>
+                  </svg>
+                  <span class="nhsuk-header__service-name">Buy an NHS Prescription Prepayment Certificate</span>
+              </a>
+          </div>
       </div>
-    </div>
   </header>
   
   <div class="nhsuk-width-container">
@@ -129,6 +157,7 @@
   </div>
  </div>
 </footer>
+
 
     <script src="https://ppc-design-history.netlify.app/javascripts/nhsuk-frontend.js"></script>
     <script src="https://ppc-design-history.netlify.app/javascripts/application.js"></script>
