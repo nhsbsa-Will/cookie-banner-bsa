@@ -14,9 +14,7 @@
 		<meta name="google-site-verification" content="qpNT6OLWnnqQgQEtdfYnP7vkTpJ113Og086fedMuaEY" />
  
 		<!--[if gt IE 8]><!--><link href="https://services.nhsbsa.nhs.uk/buy-prescription-prepayment-certificate/webjars/nhs-template/1.0.22956/stylesheets/govuk-template.css" media="screen" rel="stylesheet" /><!--<![endif]-->
-		<!--[if IE 6]><link href="/buy-prescription-prepayment-certificate/webjars/nhs-template/1.0.22956/stylesheets/govuk-template-ie6.css" media="screen" rel="stylesheet" /><![endif]-->
-		<!--[if IE 7]><link href="/buy-prescription-prepayment-certificate/webjars/nhs-template/govuk-template-ie7.css" media="screen" rel="stylesheet" /><![endif]-->
-		<!--[if IE 8]><link href="/buy-prescription-prepayment-certificate/webjars/nhs-template/govuk-template-ie8.css" media="screen" rel="stylesheet" /><![endif]-->
+	
 		<link href="https://services.nhsbsa.nhs.uk/buy-prescription-prepayment-certificate/webjars/nhs-template/1.0.22956/stylesheets/govuk-template-print.css" media="print" rel="stylesheet" />
 		<!--[if IE 8]><link href="/buy-prescription-prepayment-certificate/webjars/nhs-template/stylesheets/fonts-ie8.css" media="all" rel="stylesheet" /><![endif]-->
 		<!--[if gte IE 9]><!--><link href="https://services.nhsbsa.nhs.uk/buy-prescription-prepayment-certificate/webjars/nhs-template/1.0.22956/stylesheets/fonts.css" media="all" rel="stylesheet" /><!--<![endif]-->
@@ -29,9 +27,7 @@
 		<link rel="apple-touch-icon-precomposed" href="https://services.nhsbsa.nhs.uk/buy-prescription-prepayment-certificate/webjars/nhs-template/1.0.22956/images/apple-touch-icon-60x60.png" />
 		<!--[if gt IE 8]><!--><link href="https://services.nhsbsa.nhs.uk//buy-prescription-prepayment-certificate/webjars/nhs-template/1.0.22956/stylesheets/elements-page.css" rel="stylesheet" type="text/css" /><!--<![endif]-->
 		<link href="https://services.nhsbsa.nhs.uk/buy-prescription-prepayment-certificate/css/application.css" media="all" rel="stylesheet" type="text/css"/>
-		<!--[if IE 6]><link href="/buy-prescription-prepayment-certificate/webjars/nhs-template/1.0.22956/stylesheets/elements-page-ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
-		<!--[if IE 7]><link href="/buy-prescription-prepayment-certificate/webjars/nhs-template/1.0.22956/stylesheets/elements-page-ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
-		<!--[if IE 8]><link href="/buy-prescription-prepayment-certificate/webjars/nhs-template/1.0.22956/stylesheets/elements-page-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+
 		<link href="https://services.nhsbsa.nhs.uk/buy-prescription-prepayment-certificate/webjars/nhs-template/1.0.22956/stylesheets/vendor/prism.css" media="screen" rel="stylesheet" />
 		<!--[if gt IE 8]><!--><script src="https://services.nhsbsa.nhs.uk/buy-prescription-prepayment-certificate/webjars/nhs-template/1.0.22956/javascripts/vendor/prism.js"></script><!--<![endif]-->
     
@@ -50,7 +46,7 @@
       const getSession = sessionStorage.getItem("sessionURL");
       
 			console.log(`The previous URL was = ${getSession}`);
-			}
+			};
 		</script>
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -68,12 +64,12 @@
 
   <body class="nhs-bsa">
 	  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
-	  <div id="skiplink-container">
-		  <div>
-			  <a href="#content" class="skiplink">Skip to main content</a>
-		  </div>
-	  </div>
     <header role="banner" id="nhs-global-header">
+      <div id="skiplink-container">
+        <div>
+          <a href="#content" class="skiplink">Skip to main content</a>
+        </div>
+      </div>
       <div class="header-wrapper">
         <div class="header-global">
           <div class="header-logo">
@@ -81,12 +77,7 @@
               <img src="https://services.nhsbsa.nhs.uk/buy-prescription-prepayment-certificate/webjars/nhs-template/1.0.22956/images/bsa_logo.svg" alt="NHS Business Services Authority print logo"/>
             </span>
             <a href="https://services.nhsbsa.nhs.uk/buy-prescription-prepayment-certificate/start" class="content" id="logo" title="Return to start">
-              <!--[if gt IE 8]><!-->
                 <img src="https://services.nhsbsa.nhs.uk/buy-prescription-prepayment-certificate/webjars/nhs-template/1.0.22956/images/bsa_logo.svg" alt="NHS Business Services Authority" />
-              <!--<![endif]-->
-              <!--[if lt IE 9]>
-                <img src="/buy-prescription-prepayment-certificate/webjars/nhs-template/1.0.22956/images/bsa_logo.png" style="width:256px" alt="NHS Business Services Authority" />
-              <![endif]-->
             </a>
           </div>
         </div>
@@ -105,6 +96,7 @@
       <div class="grid-row">
 			  <div class="column-two-thirds">
           <h1 class="heading-xlarge">Buy an NHS Prescription Prepayment Certificate</h1>
+
           <p>Save money on NHS prescriptions by prepaying for them.</p>
           <p>You can pay a set price for prescriptions for 3 or 12 months, no matter how many you need.</p>
           <p>A prescription costs £<span>9.15</span> per item, but prepaying for an unlimited number of prescriptions is:</p>
