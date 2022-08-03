@@ -125,7 +125,7 @@
             code {
               color: #d14;
               padding: 3px;
-              /* background-color:whitesmoke; */
+              background-color:whitesmoke;
             }
           </style>
           <h2 class="heading-medium">Notes</h2>
@@ -136,6 +136,358 @@
         </div>
       </div>
       <!-- /. -->
+
+      <!-- good modal 
+      <dialog id="js-modal-dialog" class="modal-dialog dialog" role="dialog" aria-live="polite" aria-labelledby="dialog-title" aria-describedby="at-timer" data-url-redirect="/check-for-help-paying-nhs-costs/session-timeout" data-session-timeout-warning="1740" data-session-timeout="1800" open="">
+        <div class="modal-dialog__inner">
+          <h1 id="dialog-title" class="heading-large">
+            Your application will time out soon
+          </h1>
+          <div class="modal-dialog__inner__text">
+            <div id="timer" class="timer" aria-hidden="true" aria-relevant="additions">We will reset your application if you do not respond in <strong><span class="tabular-numbers">28</span> minutes <span class="tabular-numbers">22</span> seconds</strong>.   We do this to keep your information secure.</div>
+            <div id="at-timer" class="at-timer visually-hidden" role="status">We will reset your application if you do not respond in twenty eight minutes and thirty seconds.</div>
+            
+          </div>
+          <div class="modal-dialog__inner__block">
+            <button class="button dialog-button modal-dialog__inner__button js-dialog-close">Continue application</button>
+          </div>
+        </div>
+      </dialog> -->
+      <!--<style>
+        .modal-dialog {
+          display: none;
+        }
+        .modal-dialog--no-js-persistent {
+          display: inline-block;
+        }
+        
+        .js-enabled .modal-dialog--no-js-persistent {
+          display: none;
+        }
+        
+        .js-enabled .modal-dialog--no-js-persistent[open] {
+          display: inline-block;
+        }
+        
+        .js-enabled .modal-dialog--no-js-persistent .dialog-button {
+          display: inline-block;
+        }
+        
+        .js-enabled .modal-dialog[open] {
+          display: inline-block;
+        }
+        
+        .modal-dialog[open] {
+          overflow-x: hidden;
+          overflow-y: auto;
+          max-height: 90vh;
+          padding: 0;
+          margin-bottom: 0;
+          margin-top: 0;
+          position: fixed;
+          top: 50% !important;
+          -webkit-transform: translate(0, -50%);
+          -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+        }
+        
+        @media (min-width: 641px) {
+          .modal-dialog[open] {
+            padding: 0;
+          }
+        }
+        
+        .modal-dialog__inner {
+          padding: 20px;
+        }
+        
+        @media (min-width: 641px) {
+          .modal-dialog__inner {
+            padding: 30px;
+          }
+        }
+        
+        .modal-dialog__inner__text {
+          font-family: "nta", Arial, sans-serif;
+          font-weight: 400;
+          text-transform: none;
+          font-size: 16px;
+          line-height: 1.25;
+          padding-top: 2px;
+          padding-bottom: 8px;
+          margin-bottom: 20px;
+        }
+        
+        @media (min-width: 641px) {
+          .modal-dialog__inner__text {
+            font-size: 19px;
+            line-height: 1.31579;
+          }
+        }
+        
+        @media (min-width: 641px) {
+          .modal-dialog__inner__text {
+            padding-top: 0;
+            padding-bottom: 5px;
+          }
+        }
+        
+        .modal-dialog__inner__button {
+          font-size: 19px;
+        }
+        
+        .modal-dialog__inner__link {
+          font-family: "nta", Arial, sans-serif;
+          font-weight: 400;
+          text-transform: none;
+          font-size: 16px;
+          line-height: 1.25;
+          padding-top: 2px;
+          padding-bottom: 8px;
+          background: none;
+          border: none;
+          vertical-align: middle;
+          margin-top: 20px;
+        }
+        
+        @media (min-width: 641px) {
+          .modal-dialog__inner__link {
+            font-size: 19px;
+            line-height: 1.31579;
+          }
+        }
+        
+        @media (min-width: 641px) {
+          .modal-dialog__inner__link {
+            padding-top: 0;
+            padding-bottom: 5px;
+          }
+        }
+        
+        @media (max-width: 640px) {
+          .modal-dialog__inner__link {
+            text-align: center;
+            display: block;
+            margin-top: 25px;
+          }
+        }
+        
+        @media (min-width: 641px) {
+          .modal-dialog__inner__link {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 0;
+            margin: 0 0 0 30px;
+          }
+        }
+        
+        .modal-dialog__inner__link:hover {
+          cursor: pointer;
+        }
+        
+        .modal-dialog__inner__block {
+          position: relative;
+        }
+        
+        .modal-dialog #dialog-title {
+          margin-top: 0;
+        }
+        
+        .dialog-is-open {
+          overflow: hidden;
+        }
+        
+        dialog {
+          left: 0;
+          right: 0;
+          width: -moz-fit-content;
+          width: -webkit-fit-content;
+          width: fit-content;
+          height: -moz-fit-content;
+          height: -webkit-fit-content;
+          height: fit-content;
+          margin: auto;
+          border: solid;
+          padding: 1em;
+          background: white;
+          color: black;
+          display: none;
+          border: 5px solid black;
+        }
+        
+        dialog + .backdrop {
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.8);
+        }
+        
+        dialog[open] {
+          display: block;
+          box-sizing: border-box;
+          margin: 0 auto;
+          padding: 15px;
+          width: 90%;
+        }
+        
+        @media (min-width: 641px) {
+          dialog[open] {
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 500px;
+          }
+        }
+        
+        dialog[open] + .backdrop {
+          background: rgba(0, 0, 0, 0.8);
+        }
+        
+        dialog[open]::backdrop {
+          background: rgba(0, 0, 0, 0.8);
+        }
+        
+        .tabular-numbers {
+          font-family: "ntatabularnumbers", "nta", Arial, sans-serif;
+        }
+      </style>-->
+
+      <!-- bad modal -->
+      <div class="dialog" id="dialog-deleteDocumentType" aria-hidden="true">
+        <div class="dialog-holder" aria-labelledby="dialog-title-1" aria-describedby="dialog-content-1" role="alertdialog">
+          <div class="dialog-content" id="deleteDocType" role="document" tabindex="0">
+            <h1 class="dialog-heading" id="deleteDocTypeHeading">Delete document type</h1>
+            <form class="form">
+              <p>Are you sure you want to delete this document type?</p>
+              <div class="dialog-actions">
+                <button class="button" type="submit" value="Delete" name="Delete">Yes</button>
+                <a class="dialog-cancel" href="/">Cancel</a>
+              </div>
+              <a class="dialog-close" aria-label="close" type="button">
+                <span class="icon icon-close">x</span>
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+      <style>
+        .dialog {
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          background-color: rgba(0, 0, 0, 0.5);
+          height: 100%;
+          padding: 15px;
+          position: fixed;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          text-align: center;
+          width: 100%;
+          z-index: 0;
+        }
+        
+        .dialog:before {
+          content: '';
+          display: inline-block;
+          height: 100%;
+          margin-right: -.25em;
+          vertical-align: middle;
+        }
+        .dialog-holder {
+          background-color: #fff;
+          border: 10px solid #fff;
+          display: inline-block;
+          margin: auto;
+          max-width: 90vw;
+          max-height: 90vh;
+          position: relative;
+          top: 0;
+          left: 0;
+          right: 0;
+          overflow-y: auto;
+          overflow-x: hidden;
+        }
+        .dialog-content {
+          outline: none;
+          padding: 1em;
+          text-align: left;
+        }
+        @media ( max-width : 640px) {
+          .dialog-heading {
+            font-size: 24px;
+            line-height: 1.04167;
+          }
+          .dialog-holder {
+            background-color: #fff;
+            border: 10px solid #fff;
+            display: inline-block;
+            margin: auto;
+            max-width: 90vw;
+            max-height: 90vh;
+            position: fixed;
+            top:0;
+            left:0;
+            right:0;
+            overflow-y: auto;
+            overflow-x: hidden;
+          }
+        }
+        .dialog-close {
+          text-indent: -119988px;
+          overflow: hidden;
+          text-align: left;
+          text-transform: capitalize;
+          background-color: transparent;
+          border: 0 none;
+          cursor: pointer;
+          height: 22px;
+          margin: auto;
+          padding: 0;
+          position: absolute;
+          top: 5px;
+          right: 5px;
+          width: 22px;
+        }
+        .dialog-heading {
+          font-family: Arial, sans-serif;
+          font-size: 36px;
+          line-height: 1.11111;
+          font-weight: 700;
+          text-transform: none;
+          margin-top: .625em;
+          margin-bottom: .41667em;
+        }
+        .dialog-close span {
+          cursor: pointer;
+        }
+        .icon {
+          background-size: 100%;
+          background-repeat: no-repeat;
+          cursor: default;
+          display: block;
+          height: 22px;
+          text-align: center;
+          vertical-align: middle;
+          width: 22px;
+        }
+        .icon a:hover {
+          background: transparent;
+        }
+        .icon-close {
+          background-image: url(/images/closing-cross.png);
+          display: block;
+        }
+        @media only screen and (-webkit-min-device-pixel-ratio: 2) , not all , not all , not all , only screen and (min-resolution: 192dpi) , only screen and (min-resolution: 2dppx) {
+          .icon-close {
+            background-image: url(/images/closing-cross.png);
+            background-size: 100%;
+          }
+        }
+      </style>
 	  </main>
 	  
 		<footer id="footer" role="contentinfo" class="noprint group js-footer">
